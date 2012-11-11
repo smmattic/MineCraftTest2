@@ -26,7 +26,7 @@ public class FlatLandsGenerator extends ChunkGenerator {
 
 		return populators;
 	}
-
+    
 	public Location getFixedSpawnLocation(World world, Random random) {
 		return new Location(world, 20, 20, 20);
 	}
@@ -85,7 +85,6 @@ public class FlatLandsGenerator extends ChunkGenerator {
 							int block = (random.nextInt(100) <= 85) ? Material.COAL.getId() : Material.STONE.getId();
 							blocks[this.coordsToInt(x, y, z)] = (byte) block;
 						}
-						blocks[this.coordsToInt(x, y, z)] = (byte) Material.COAL.getId();
 					} else if (15 == y) {
 						blocks[this.coordsToInt(x, y, z)] = (byte) Material.STONE.getId();
 					} else if (16 == y) {
